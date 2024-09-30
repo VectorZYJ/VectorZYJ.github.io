@@ -35,7 +35,7 @@ $$(K_1, V_1) \rightarrow \text{list}(K_2, V_2)$$
 
 $$(K_2, \text{list}(V_2)) \rightarrow \text{list}(K_2, V_2)$$
 
-**Partition**阶段: 如果MapReduce作业中涉及多个reducer，就需要使用Partition函数(partitioner)，按照一定规则将mapper或combiner的输出结果分块。分块完成后，所有具有**相同键**的键值对均**位于同一分块中**。分块可以是range-based的，比如将a-m开头的键划分成分块一，将n-z开头的键划分成分块二，这样分块一给第一个reducer，分块二给第二个reducer。
+**Partition**阶段: 如果MapReduce作业涉及多个reducer，需要使用Partition函数(partitioner)，按照一定规则将mapper或combiner的输出结果分块。分块完成后，所有具有**相同键**的键值对均**位于同一分块中**。分块可以是range-based的，比如将a-m开头的键划分成分块一，将n-z开头的键划分成分块二，这样分块一给第一个reducer，分块二给第二个reducer。
 
 **Shuffle-Sort**阶段: 由partitioner产生的结果通过网络传输至执行reduce任务的结点，在每个结点中，键值对**根据键进行排序和**分组。
 
@@ -48,4 +48,4 @@ $$(K_2, \text{list}(V_2)) \rightarrow \text{list}(K_3, V_3)$$
 ![MapReduce示例](../img/MapReduce/mapreduce_example.png)
 
 
-## 2. MapReduce工作过程数据流
+## 2. MapReduce数据流
