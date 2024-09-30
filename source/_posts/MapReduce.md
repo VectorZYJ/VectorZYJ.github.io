@@ -1,15 +1,12 @@
 ---
 title: MapReduce
+excerpt: 介绍MapReduce的原理、工作流程、数据流和系统架构
 date: 2024-09-30 15:42:33
 tags:
 math: true
 category_bar: true
 categories: Realtime Big Data Analyic
 ---
-
-介绍MapReduce的原理、工作流程、数据流和系统架构。
-
-<!-- more -->
 
 # MapReduce
 
