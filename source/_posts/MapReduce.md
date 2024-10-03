@@ -5,7 +5,7 @@ date: 2024-09-30 15:42:33
 tags:
 math: true
 category_bar: true
-categories: Realtime Big Data Analyic
+categories: Realtime Big Data Analytic
 ---
 
 # MapReduce
@@ -14,13 +14,13 @@ categories: Realtime Big Data Analyic
 
 ### 概览
 
- MapReduce是一个用来对数据进行批处理的框架，**可扩展性**和**可靠性**高，能够提供**容忍差错**。在MapReduce框架下，输入数据并不需要按照一定数据模型，因此该框架能处理无模式的数据。MapReduce框架将数据分为若干数据块，能够并行处理和运算，从每个数据块得到的运算结果经过汇总得到最终结果。
+ MapReduce是用来对数据进行批处理的计算框架，**可扩展性**和**可靠性**高，能够提供**容忍差错**。在MapReduce框架下，输入数据并不需要按照一定数据模型，因此该框架能处理无模式的数据。MapReduce框架将数据分为若干数据块，能够并行处理和运算，从每个数据块得到的运算结果经过汇总得到最终结果。
 
 传统的数据处理需要将数据迁移至处理数据的结点上，然而MapReduce则是将**数据处理程序迁移至储存数据的结点**上，这样避免了大批量数据的移动，同时也能够**节省带宽**、**减少处理大数据的时间**。
 
 ### 工作流程
 
-一个MapReduce作业(Job)是一系列需要完成的工作，Hadoop将一项作业分为两个任务(Task)**map**和**reduce**，然后把MapReduce作业所需要的输入数据分为多个分片(Split)，并且为每一个分片创建一个map任务，对这一块中的每一条记录执行map函数。
+MapReduce作业(Job)由一系列需要完成的工作组成，Hadoop将一项作业分为两个任务(Task)**map**和**reduce**，然后把MapReduce作业所需要的输入数据分为若干分片(Split)，为每一个分片创建一个map任务，对其中每一条记录执行map函数。
 
 ![MapReduce的工作流程](../img/MapReduce/mapreduce_workflow.png)
 
@@ -92,7 +92,7 @@ MapReduce作业的运行涉及如下五个实体：
 - 客户端：向YARN资源管理器提交MapReduce作业
 - YARN资源管理器：协调集群上的计算资源分配
 - YARN结点管理器：启动和监控集群中机器上用于计算的容器
-- MapReduce应用主进程：协调运行MapReduce作业中的任务，主进程和任务在容器中运行，容器由资源管理器分配，由结点管理器管理
+- MapReduce应用主进程：协调运行MapReduce作业中的任务，主进程和任务在容器中运行，容器由**资源管理器分配**，由**结点管理器管理**
 - 分布式文件系统HDFS：在实体之间共享作业所需文件
 
 ![Hadoop的MapReduce作业运行机制](../img/MapReduce/mapreduce_jobexec.png)
