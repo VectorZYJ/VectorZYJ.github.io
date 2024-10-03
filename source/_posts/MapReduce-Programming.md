@@ -8,15 +8,11 @@ category_bar: true
 categories: Realtime and Big Data Analytics
 ---
 
-```java
-package org.apache.hadoop.io;
+# MapReduce Programming
 
-import java.io.DataOutput;
-import java.io.DataInput;
-import java.io.IOException;
+## 1. Serialization
 
-public interface Writable {
-    void write(DataOutput out) throws IOException;
-    void readFields(DataInput in) throws IOException;
-}
-```
+## 2. 计数器
+
+## 3. MapReduce设计模式
+
